@@ -366,3 +366,26 @@ html {
     font-size: 14px;
   }
 }
+
+/* 手機：避免頂部被瀏覽器 UI 吃掉（100vh 問題） */
+@media (max-width: 768px) {
+  html, body {
+    height: auto;
+    min-height: 100%;
+  }
+
+  body {
+    overflow: auto; /* 讓手機可以自然滾動 */
+  }
+
+  .wrapper {
+    min-height: 100dvh; /* 用 d vh 比較準（動態視窗高度） */
+    align-items: flex-start; /* 不要垂直置中，改靠上 */
+    padding-top: calc(16px + env(safe-area-inset-top)); /* iPhone 安全區 */
+    padding-bottom: calc(16px + env(safe-area-inset-bottom));
+  }
+
+  .card-container {
+    margin-top: 0;  /* 確保不會往上擠 */
+  }
+}
