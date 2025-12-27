@@ -229,6 +229,7 @@ html {
 .text-content {
   font-size: 16px;
   line-height: 1.8;
+  text-indent: 2em;  /* 開頭空兩格的感覺 */
   color: #333;
   text-align: justify;
   margin-bottom: 20px;
