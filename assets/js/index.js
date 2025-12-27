@@ -13,7 +13,7 @@ const defaultConfig = {
 };
 
 let currentPage = 1;
-const totalPages = 5;
+const totalPages = document.querySelectorAll('.page').length;
 
 async function onConfigChange(config) {
   document.getElementById('couple-names').textContent = config.couple_names || defaultConfig.couple_names;
