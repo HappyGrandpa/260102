@@ -62,11 +62,26 @@ document.addEventListener('keydown', (e) => {
 });
 
 function createHeart(x, y) {
-  const heart = document.createElement('div');
-  heart.className = 'heart';
-  heart.textContent = ['❤️', '💗', '💕', '💖'][Math.floor(Math.random() * 4)];
+  const heart = document.createElement('img');
+  heart.className = 'heart-img';
+
+  const images = [
+    'assets/images/1.PNG',
+    'assets/images/5.jpg',
+    'assets/images/6.jpg',
+    'assets/images/8.jpg',
+    'assets/images/12.jpg',
+    'assets/images/17.JPG',
+    'assets/images/18.PNG',
+    'assets/images/19.PNG',
+    'assets/images/20.jpg'
+  ];
+
+  heart.src = images[Math.floor(Math.random() * images.length)];
+
   heart.style.left = x + 'px';
   heart.style.top = y + 'px';
+
   document.body.appendChild(heart);
 
   setTimeout(() => {

@@ -397,3 +397,13 @@ html {
     margin-top: 0;  /* 確保不會往上擠 */
   }
 }
+
+.heart-img {
+  position: fixed;
+  width: 40px;       /* 可自己調大小 */
+  height: auto;
+  pointer-events: none;
+  z-index: 9999;
+
+  animation: floatHeart 3s ease-out forwards;
+}
